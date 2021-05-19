@@ -1,0 +1,34 @@
+﻿<Window x:Class="RelaxUI.UzenetDoboz"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RelaxUI"
+        mc:Ignorable="d"
+        x:Name="uzenetdoboz"
+        Title="{Binding Fejlec, ElementName=uzenetdoboz, Mode=OneWay}"
+        ResizeMode="NoResize" SizeToContent="WidthAndHeight" MinWidth="440" MaxWidth="1024" WindowStartupLocation="CenterOwner" ShowInTaskbar="False">
+
+    <Window.Resources>
+        <local:UzenetDobozIkonImageKonvertalo x:Key="uzenetdobozikonimagekonvertalo"/>
+    </Window.Resources>
+
+    <StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Image Source="{Binding Ikon, ElementName=uzenetdoboz, Converter={StaticResource uzenetdobozikonimagekonvertalo}, Mode=OneWay}" Margin="20" VerticalAlignment="Top" Width="32" Height="32"/>
+            <TextBlock Text="{Binding Uzenet, ElementName=uzenetdoboz, Mode=OneWay}" Grid.Column="1" Margin="5,20,20,20" TextWrapping="Wrap"/>
+        </Grid>
+
+        <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">
+            <Button x:Name="igengomb" Content="Igen" Margin="10,10,0,10" Width="80" TabIndex="103" Click="igengomb_Click"/>
+            <Button x:Name="nemgomb" Content="Nem" Margin="10,10,0,10" Width="80" TabIndex="102" Click="nemgomb_Click"/>
+            <Button x:Name="okgomb" Content="Ok" Margin="10,10,0,10" Width="80" TabIndex="101" Click="okgomb_Click"/>
+            <Button x:Name="megsegomb" Content="Mégse" Margin="10,10,0,10" Width="80" TabIndex="100" Click="megsegomb_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
