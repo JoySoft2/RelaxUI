@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -39,6 +40,7 @@ namespace RelaxUI
             InitializeComponent();
         }
 
+        [Category("Common")]
         public SzovegDobozBemenetFajtak BemenetFajtaja
         {
             get { return (SzovegDobozBemenetFajtak)GetValue(BemenetFajtajaProperty); }
