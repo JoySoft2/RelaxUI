@@ -16,7 +16,9 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel>
-            <Button Command="{Binding UzenetDobozParancs}" Content="Üzenetdoboz"/>
+            <TextBlock Text="TextBlock" Margin="0,0,0,10"/>
+
+            <Button Command="{Binding UzenetDobozParancs}" Content="Üzenetdoboz" Margin="0,0,0,10"/>
         </StackPanel>
 
     </Grid>
