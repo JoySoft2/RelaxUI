@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Authors>Boruzs Tamás</Authors>
+    <Company>Boruzs Tamás</Company>
+    <Product></Product>
+    <Copyright>© 2021 Boruzs Tamás</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RelaxUI\RelaxUI.csproj" />
+  </ItemGroup>
+
+</Project>

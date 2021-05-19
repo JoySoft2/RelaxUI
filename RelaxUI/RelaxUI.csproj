@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <PackageId>Relax UI</PackageId>
+    <Product>Relax UI</Product>
+    <Authors>Boruzs Tamás</Authors>
+    <Company />
+    <Version>0.1.0</Version>
+    <Copyright>© 2021 Boruzs Tamás</Copyright>
+  </PropertyGroup>
+
+</Project>
