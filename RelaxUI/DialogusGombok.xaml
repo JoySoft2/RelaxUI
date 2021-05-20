@@ -13,7 +13,7 @@
     </UserControl.Resources>
 
 
-    <Border BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" BorderThickness="0,1,0,0">
+    <Border BorderBrush="{DynamicResource ecset.vezerlokeretszin}" BorderThickness="0,1,0,0" Background="{DynamicResource ecset.panelszin}">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />

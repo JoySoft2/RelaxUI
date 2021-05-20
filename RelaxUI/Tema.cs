@@ -11,6 +11,11 @@ namespace RelaxUI
     {
         public string Megnevezes                  { get; set; }
         public Color TemaSzin                     { get; set; }
+        public Color StatuszAlapSzin              { get; set; }
+        public Color StatuszOkSzin                { get; set; }
+        public Color StatuszInformacioSzin        { get; set; }
+        public Color StatuszFigyelmeztetesSzin    { get; set; }
+        public Color StatuszHibaSzin              { get; set; }
         public Color AblakHatterSzin              { get; set; }
         public Color PanelSzin                    { get; set; }
         public Color SzovegSzin                   { get; set; }

@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         x:Name="uzenetdoboz"
         Title="{Binding Fejlec, ElementName=uzenetdoboz, Mode=OneWay}"
+        Background="{DynamicResource ecset.ablakhatterszin}"
         ResizeMode="NoResize" SizeToContent="WidthAndHeight" MinWidth="440" MaxWidth="1024" WindowStartupLocation="CenterOwner" ShowInTaskbar="False">
 
     <Window.Resources>
@@ -24,11 +25,28 @@
             <TextBlock Text="{Binding Uzenet, ElementName=uzenetdoboz, Mode=OneWay}" Grid.Column="1" Margin="5,20,20,20" TextWrapping="Wrap"/>
         </Grid>
 
-        <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">
+        <!--<StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">
             <Button x:Name="igengomb" Content="Igen" Margin="10,10,0,10" Width="80" TabIndex="103" Click="igengomb_Click"/>
             <Button x:Name="nemgomb" Content="Nem" Margin="10,10,0,10" Width="80" TabIndex="102" Click="nemgomb_Click"/>
             <Button x:Name="okgomb" Content="Ok" Margin="10,10,0,10" Width="80" TabIndex="101" Click="okgomb_Click"/>
             <Button x:Name="megsegomb" Content="Mégse" Margin="10,10,0,10" Width="80" TabIndex="100" Click="megsegomb_Click"/>
-        </StackPanel>
+        </StackPanel>-->
+
+        <Border BorderBrush="{DynamicResource ecset.vezerlokeretszin}" BorderThickness="0,1,0,0" Background="{DynamicResource ecset.panelszin}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="igengomb" Grid.Column="1" Content="Igen" Margin="0,10,10,10" Width="80" TabIndex="103" Click="igengomb_Click"/>
+                <Button x:Name="nemgomb" Grid.Column="2" Content="Nem" Margin="0,10,10,10" Width="80" TabIndex="102" Click="nemgomb_Click"/>
+                <Button x:Name="okgomb" Grid.Column="3" Content="Ok" Margin="0,10,10,10" Width="80" TabIndex="101" Click="okgomb_Click"/>
+                <Button x:Name="megsegomb" Grid.Column="4" Content="Mégse" Margin="0,10,10,10" Width="80" TabIndex="100" Click="megsegomb_Click"/>
+            </Grid>
+        </Border>
     </StackPanel>
 </Window>

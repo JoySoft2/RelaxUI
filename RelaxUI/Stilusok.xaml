@@ -3,23 +3,33 @@
                     xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2"
                     xmlns:local="clr-namespace:RelaxUI">
 
-    <!--<SolidColorBrush x:Key="ecset.temaszin" Color="{Binding Path=AktivTema.TemaSzin, Source={x:Static local:Temak.Peldany}, Mode=OneWay}"/>
-    <SolidColorBrush x:Key="ecset.ablakhatter" Color="{Binding Path=AktivTema.AblakHatterSzin, Source={x:Static local:Temak.Peldany}, Mode=OneWay}"/>
-    <SolidColorBrush x:Key="ecset.panel" Color="{Binding Path=AktivTema.PanelSzin, Source={x:Static local:Temak.Peldany}, Mode=OneWay}"/>
-    <SolidColorBrush x:Key="ecset.szoveg" Color="{Binding Path=AktivTema.SzovegSzin, Source={x:Static local:Temak.Peldany}, Mode=OneWay}"/>
-    <SolidColorBrush x:Key="ecset.szovegletiltott" Color="{Binding Path=AktivTema.SzovegLetiltottSzin, Source={x:Static local:Temak.Peldany}, Mode=OneWay}"/>
-    <SolidColorBrush x:Key="ecset.vezerlohatter" Color="{Binding Path=AktivTema.VezerloHatterSzin, Source={x:Static local:Temak.Peldany}, Mode=OneWay}"/>
-    <SolidColorBrush x:Key="ecset.vezerlokeret" Color="{Binding Path=AktivTema.VezerloKeretSzin, Source={x:Static local:Temak.Peldany}, Mode=OneWay}"/>-->
-
-    <SolidColorBrush x:Key="ecset.statuszalap" Color="{DynamicResource {x:Static SystemColors.ControlTextColorKey}}"/>
-    <SolidColorBrush x:Key="ecset.statuszok" Color="#FF00AF00"/>
-    <SolidColorBrush x:Key="ecset.statuszinformacio" Color="#FF0000AF"/>
-    <SolidColorBrush x:Key="ecset.statuszfigyelmeztetes" Color="#FFFFAF00"/>
-    <SolidColorBrush x:Key="ecset.statuszhiba" Color="#FFFF0000"/>
-    <SolidColorBrush x:Key="ecset.statuszkerdes" Color="#FF000000"/>
+    <SolidColorBrush x:Key="ecset.temaszin"                     Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.TemaSzin                    , Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.statuszalap"                  Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.StatuszAlapSzin             , Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.statuszok"                    Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.StatuszOkSzin               , Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.statuszinformacio"            Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.StatuszInformacioSzin       , Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.statuszfigyelmeztetes"        Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.StatuszFigyelmeztetesSzin   , Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.statuszhiba"                  Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.StatuszHibaSzin             , Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.ablakhatterszin"              Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.AblakHatterSzin             , Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.panelszin"                    Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.PanelSzin                   , Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.szovegszin"                   Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.SzovegSzin                  , Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.szovegletiltottszin"          Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.SzovegLetiltottSzin         , Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.vezerlohatterszin"            Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.VezerloHatterSzin           , Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.vezerlokeretszin"             Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.VezerloKeretSzin            , Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.vezerlohatteregerfeletteszin" Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.VezerloHatterEgerFeletteSzin, Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.vezerlokeretegerfeletteszin"  Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.VezerloKeretEgerFeletteSzin , Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.vezerlohatterakcioszin"       Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.VezerloHatterAkcioSzin      , Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.vezerlokeretakcioszin"        Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.VezerloKeretAkcioSzin       , Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.vezerlohatterfokuszszin"      Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.VezerloHatterFokuszSzin     , Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.vezerlokeretfokuszszin"       Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.VezerloKeretFokuszSzin      , Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.vezerlohatterletiltottszin"   Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.VezerloHatterLetiltottSzin  , Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.vezerlokeretletiltottszin"    Color="{Binding Source={x:Static local:Temak.Egyke}, Path=AktivTema.VezerloKeretLetiltottSzin   , Mode=OneWay}"/>
 
     <!-- ****************************************************************************************************************************************************************************************** -->
 
+    <!-- TextBlock ******************************************************************************************************************************************************************************** -->
+    <Style TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="{DynamicResource ecset.temaszin}"/>
+    </Style>
 
     <!-- TextBox ********************************************************************************************************************************************************************************** -->
     <Style TargetType="{x:Type TextBox}">

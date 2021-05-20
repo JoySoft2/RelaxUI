@@ -36,10 +36,15 @@ namespace RelaxUI
 
             TemaLista.Add(new Tema()
             {
-                Megnevezes = "Alapértelmezett",
+                Megnevezes                   = "Alapértelmezett",
                 TemaSzin                     = ColorFromARGBHexText("FF672878"),
+                StatuszAlapSzin              = ColorFromARGBHexText("FFEFEFEF"),
+                StatuszOkSzin                = ColorFromARGBHexText("FF00AF00"),
+                StatuszInformacioSzin        = ColorFromARGBHexText("FF0000AF"),
+                StatuszFigyelmeztetesSzin    = ColorFromARGBHexText("FFFFAF00"),
+                StatuszHibaSzin              = ColorFromARGBHexText("FFFF0000"),
                 AblakHatterSzin              = ColorFromARGBHexText("FF128345"),
-                PanelSzin                    = ColorFromARGBHexText("FF202020"),
+                PanelSzin                    = ColorFromARGBHexText("FF202080"),
                 SzovegSzin                   = ColorFromARGBHexText("FF913654"),
                 SzovegLetiltottSzin          = ColorFromARGBHexText("FF7F7F7F"),
                 VezerloHatterSzin            = ColorFromARGBHexText("FF282828"),
@@ -69,6 +74,11 @@ namespace RelaxUI
 
                     tema.Megnevezes                   = node.Attributes["Megnevezes"].Value;
                     tema.TemaSzin                     = ColorFromARGBHexText(node["TemaSzin"                    ].Attributes["ARGB"].Value);
+                    tema.StatuszAlapSzin              = ColorFromARGBHexText(node["StatuszAlapSzin"             ].Attributes["ARGB"].Value);
+                    tema.StatuszOkSzin                = ColorFromARGBHexText(node["StatuszOkSzin"               ].Attributes["ARGB"].Value);
+                    tema.StatuszInformacioSzin        = ColorFromARGBHexText(node["StatuszInformacioSzin"       ].Attributes["ARGB"].Value);
+                    tema.StatuszFigyelmeztetesSzin    = ColorFromARGBHexText(node["StatuszFigyelmeztetesSzin"   ].Attributes["ARGB"].Value);
+                    tema.StatuszHibaSzin              = ColorFromARGBHexText(node["StatuszHibaSzin"             ].Attributes["ARGB"].Value);
                     tema.AblakHatterSzin              = ColorFromARGBHexText(node["AblakHatterSzin"             ].Attributes["ARGB"].Value);
                     tema.PanelSzin                    = ColorFromARGBHexText(node["PanelSzin"                   ].Attributes["ARGB"].Value);
                     tema.SzovegSzin                   = ColorFromARGBHexText(node["SzovegSzin"                  ].Attributes["ARGB"].Value);
@@ -100,10 +110,10 @@ namespace RelaxUI
         }
 
         private static Color ColorFromARGBHexText(string _argbhextext) =>
-            Color.FromArgb(Convert.ToByte(_argbhextext[0..1], 16),
-                           Convert.ToByte(_argbhextext[2..3], 16),
-                           Convert.ToByte(_argbhextext[4..5], 16),
-                           Convert.ToByte(_argbhextext[6..7], 16));
+            Color.FromArgb(Convert.ToByte(_argbhextext[0..2], 16),
+                           Convert.ToByte(_argbhextext[2..4], 16),
+                           Convert.ToByte(_argbhextext[4..6], 16),
+                           Convert.ToByte(_argbhextext[6..8], 16));
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string _propnev = null) =>

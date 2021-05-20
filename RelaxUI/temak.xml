@@ -2,6 +2,11 @@
 <TemaLista>
   <Tema Megnevezes="Sötét">
     <TemaSzin                     ARGB="FFE22606"/>
+    <StatuszAlapSzin              ARGB="FFEFEFEF"/>
+    <StatuszOkSzin                ARGB="FF00AF00"/>
+    <StatuszInformacioSzin        ARGB="FF0000AF"/>
+    <StatuszFigyelmeztetesSzin    ARGB="FFFFAF00"/>
+    <StatuszHibaSzin              ARGB="FFFF0000"/>
     <AblakHatterSzin              ARGB="FF151515"/>
     <PanelSzin                    ARGB="FF202020"/>
     <SzovegSzin                   ARGB="FFEFEFEF"/>
