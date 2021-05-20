@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TemaLista>
+  <Tema Megnevezes="Sötét">
+    <TemaSzin                     ARGB="FFE22606"/>
+    <AblakHatterSzin              ARGB="FF151515"/>
+    <PanelSzin                    ARGB="FF202020"/>
+    <SzovegSzin                   ARGB="FFEFEFEF"/>
+    <SzovegLetiltottSzin          ARGB="FF7F7F7F"/>
+    <VezerloHatterSzin            ARGB="FF282828"/>
+    <VezerloKeretSzin             ARGB="FF323232"/>
+    <VezerloHatterEgerFeletteSzin ARGB="FF383838"/>
+    <VezerloKeretEgerFeletteSzin  ARGB="FF424242"/>
+    <VezerloHatterAkcioSzin       ARGB="FF585858"/>
+    <VezerloKeretAkcioSzin        ARGB="FF626262"/>
+    <VezerloHatterFokuszSzin      ARGB="FF383838"/>
+    <VezerloKeretFokuszSzin       ARGB="FF424242"/>
+    <VezerloHatterLetiltottSzin   ARGB="FF181818"/>
+    <VezerloKeretLetiltottSzin    ARGB="FF222222"/>
+  </Tema>
+</TemaLista>

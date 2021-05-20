@@ -1,0 +1,261 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2"
+                    xmlns:local="clr-namespace:RelaxUI">
+
+    <!--<SolidColorBrush x:Key="ecset.temaszin" Color="{Binding Path=AktivTema.TemaSzin, Source={x:Static local:Temak.Peldany}, Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.ablakhatter" Color="{Binding Path=AktivTema.AblakHatterSzin, Source={x:Static local:Temak.Peldany}, Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.panel" Color="{Binding Path=AktivTema.PanelSzin, Source={x:Static local:Temak.Peldany}, Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.szoveg" Color="{Binding Path=AktivTema.SzovegSzin, Source={x:Static local:Temak.Peldany}, Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.szovegletiltott" Color="{Binding Path=AktivTema.SzovegLetiltottSzin, Source={x:Static local:Temak.Peldany}, Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.vezerlohatter" Color="{Binding Path=AktivTema.VezerloHatterSzin, Source={x:Static local:Temak.Peldany}, Mode=OneWay}"/>
+    <SolidColorBrush x:Key="ecset.vezerlokeret" Color="{Binding Path=AktivTema.VezerloKeretSzin, Source={x:Static local:Temak.Peldany}, Mode=OneWay}"/>-->
+
+    <SolidColorBrush x:Key="ecset.statuszalap" Color="{DynamicResource {x:Static SystemColors.ControlTextColorKey}}"/>
+    <SolidColorBrush x:Key="ecset.statuszok" Color="#FF00AF00"/>
+    <SolidColorBrush x:Key="ecset.statuszinformacio" Color="#FF0000AF"/>
+    <SolidColorBrush x:Key="ecset.statuszfigyelmeztetes" Color="#FFFFAF00"/>
+    <SolidColorBrush x:Key="ecset.statuszhiba" Color="#FFFF0000"/>
+    <SolidColorBrush x:Key="ecset.statuszkerdes" Color="#FF000000"/>
+
+    <!-- ****************************************************************************************************************************************************************************************** -->
+
+
+    <!-- TextBox ********************************************************************************************************************************************************************************** -->
+    <Style TargetType="{x:Type TextBox}">
+        <Setter Property="Height" Value="24"/>
+        <Setter Property="BorderThickness" Value="1,0,0,1"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="4,0"/>
+    </Style>
+
+    <!-- SzovegDoboz ****************************************************************************************************************************************************************************** -->
+    <Style TargetType="{x:Type local:SzovegDoboz}">
+        <Setter Property="Height" Value="24"/>
+        <Setter Property="BorderThickness" Value="1,0,0,1"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="4,0"/>
+    </Style>
+
+    <!-- PasswordBox ****************************************************************************************************************************************************************************** -->
+    <Style TargetType="{x:Type PasswordBox}">
+        <Setter Property="Height" Value="24"/>
+        <Setter Property="BorderThickness" Value="1,0,0,1"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="4,0"/>
+    </Style>
+
+    <!-- Button *********************************************************************************************************************************************************************************** -->
+    <Style TargetType="{x:Type Button}">
+        <Setter Property="Height" Value="24"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <!--<Setter Property="Background" Value="Transparent"/>-->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="true">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefault" Value="true">
+                            <Setter Property="Background" TargetName="border" Value="#FFCCEECC"/>
+                        </Trigger>
+                        <Trigger Property="IsCancel" Value="true">
+                            <Setter Property="Background" TargetName="border" Value="#FFEECCCC"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" TargetName="border" Value="#FFDDDDFF"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" TargetName="border" Value="#FFCCCCFF"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsDefault" Value="true"/>
+                                <Condition Property="IsMouseOver" Value="true"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="border" Value="#FFBBFFBB"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsCancel" Value="true"/>
+                                <Condition Property="IsMouseOver" Value="true"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="border" Value="#FFFFBBBB"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsDefault" Value="true"/>
+                                <Condition Property="IsPressed" Value="true"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="border" Value="#FFAAEEAA"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsCancel" Value="true"/>
+                                <Condition Property="IsPressed" Value="true"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="border" Value="#FFEEAAAA"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.5" Duration="0:0:0.4"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1.0" Duration="0:0:0.4"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- GombIkonos ******************************************************************************************************************************************************************************* -->
+    <Style TargetType="{x:Type local:GombIkonos}">
+        <Setter Property="Height" Value="24"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <!--<Setter Property="Background" Value="Transparent"/>-->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:GombIkonos}">
+                    <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="true">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefault" Value="true">
+                            <Setter Property="Background" TargetName="border" Value="#FFCCEECC"/>
+                        </Trigger>
+                        <Trigger Property="IsCancel" Value="true">
+                            <Setter Property="Background" TargetName="border" Value="#FFEECCCC"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" TargetName="border" Value="#FFDDDDFF"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" TargetName="border" Value="#FFCCCCFF"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsDefault" Value="true"/>
+                                <Condition Property="IsMouseOver" Value="true"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="border" Value="#FFBBFFBB"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsCancel" Value="true"/>
+                                <Condition Property="IsMouseOver" Value="true"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="border" Value="#FFFFBBBB"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsDefault" Value="true"/>
+                                <Condition Property="IsPressed" Value="true"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="border" Value="#FFAAEEAA"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsCancel" Value="true"/>
+                                <Condition Property="IsPressed" Value="true"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="border" Value="#FFEEAAAA"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.5" Duration="0:0:0.4"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1.0" Duration="0:0:0.4"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- ToggleButton ***************************************************************************************************************************************************************************** -->
+    <Style TargetType="{x:Type ToggleButton}">
+        <Setter Property="Height" Value="24"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <!--<Setter Property="Background" Value="Transparent"/>-->
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.5" Duration="0:0:0.4"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1.0" Duration="0:0:0.4"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- ProgressBar ****************************************************************************************************************************************************************************** -->
+    <Style TargetType="{x:Type ProgressBar}">
+        <Setter Property="Height" Value="12"/>
+    </Style>
+
+    <!-- Menu ************************************************************************************************************************************************************************************* -->
+    <Style TargetType="{x:Type Menu}">
+        <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+    </Style>
+
+    <!-- DatePicker ******************************************************************************************************************************************************************************* -->
+    <Style TargetType="{x:Type DatePicker}">
+        <Setter Property="Height" Value="24"/>
+        <Setter Property="BorderThickness" Value="1,0,0,1"/>
+    </Style>
+
+    <Style TargetType="{x:Type DatePickerTextBox}">
+        <Setter Property="Text" Value="Határozatlan dátum"/>
+    </Style>
+
+    <!-- HeaderedContentControl ******************************************************************************************************************************************************************* -->
+    <Style TargetType="{x:Type HeaderedContentControl}">
+        <Setter Property="Focusable" Value="False"/>
+    </Style>
+
+    <Style TargetType="{x:Type GridViewColumnHeader}">
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" Margin="5,0"/>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

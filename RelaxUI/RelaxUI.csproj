@@ -27,4 +27,10 @@
     <Resource Include="Kepek\StatusWarning_32x.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="temak.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
