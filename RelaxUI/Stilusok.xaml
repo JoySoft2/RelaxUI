@@ -37,6 +37,7 @@
         <Setter Property="BorderThickness" Value="1,0,0,1"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Padding" Value="4,0"/>
+        <Setter Property="Foreground" Value="{DynamicResource ecset.temaszin}"/>
     </Style>
 
     <!-- SzovegDoboz ****************************************************************************************************************************************************************************** -->
@@ -45,6 +46,7 @@
         <Setter Property="BorderThickness" Value="1,0,0,1"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Padding" Value="4,0"/>
+        <Setter Property="Foreground" Value="{DynamicResource ecset.temaszin}"/>
     </Style>
 
     <!-- PasswordBox ****************************************************************************************************************************************************************************** -->
@@ -53,6 +55,7 @@
         <Setter Property="BorderThickness" Value="1,0,0,1"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Padding" Value="4,0"/>
+        <Setter Property="Foreground" Value="{DynamicResource ecset.temaszin}"/>
     </Style>
 
     <!-- Button *********************************************************************************************************************************************************************************** -->
@@ -235,6 +238,7 @@
     <!-- ProgressBar ****************************************************************************************************************************************************************************** -->
     <Style TargetType="{x:Type ProgressBar}">
         <Setter Property="Height" Value="12"/>
+        <Setter Property="Foreground" Value="{DynamicResource ecset.temaszin}"/>
     </Style>
 
     <!-- Menu ************************************************************************************************************************************************************************************* -->

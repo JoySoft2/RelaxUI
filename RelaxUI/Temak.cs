@@ -105,7 +105,7 @@ namespace RelaxUI
         {
             Tema ujtema = TemaLista.SingleOrDefault(t => string.Equals(t.Megnevezes, _temamegnevezes));
 
-            if (ujtema != null)
+            if (ujtema != default)
                 this.AktivTema = ujtema;
         }
 
