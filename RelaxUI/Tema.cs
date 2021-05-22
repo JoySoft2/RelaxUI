@@ -7,7 +7,7 @@ using System.Windows.Media;
 
 namespace RelaxUI
 {
-    public class Tema
+    public class Tema : ICloneable
     {
         public string Megnevezes                  { get; set; }
         public Color TemaSzin                     { get; set; }
@@ -30,6 +30,8 @@ namespace RelaxUI
         public Color VezerloKeretFokuszSzin       { get; set; }
         public Color VezerloHatterLetiltottSzin   { get; set; }
         public Color VezerloKeretLetiltottSzin    { get; set; }
+
+        public object Clone() => this.MemberwiseClone();
 
         public override string ToString() => Megnevezes;
     }

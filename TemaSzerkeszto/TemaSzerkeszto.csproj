@@ -6,4 +6,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RelaxUI\RelaxUI.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -28,7 +28,7 @@
 
     <!-- TextBlock ******************************************************************************************************************************************************************************** -->
     <Style TargetType="{x:Type TextBlock}">
-        <Setter Property="Foreground" Value="{DynamicResource ecset.temaszin}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ecset.szovegszin}"/>
     </Style>
 
     <!-- TextBox ********************************************************************************************************************************************************************************** -->
@@ -37,7 +37,7 @@
         <Setter Property="BorderThickness" Value="1,0,0,1"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Padding" Value="4,0"/>
-        <Setter Property="Foreground" Value="{DynamicResource ecset.temaszin}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ecset.szovegszin}"/>
     </Style>
 
     <!-- SzovegDoboz ****************************************************************************************************************************************************************************** -->
@@ -46,7 +46,7 @@
         <Setter Property="BorderThickness" Value="1,0,0,1"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Padding" Value="4,0"/>
-        <Setter Property="Foreground" Value="{DynamicResource ecset.temaszin}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ecset.szovegszin}"/>
     </Style>
 
     <!-- PasswordBox ****************************************************************************************************************************************************************************** -->
@@ -55,7 +55,7 @@
         <Setter Property="BorderThickness" Value="1,0,0,1"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Padding" Value="4,0"/>
-        <Setter Property="Foreground" Value="{DynamicResource ecset.temaszin}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ecset.szovegszin}"/>
     </Style>
 
     <!-- Button *********************************************************************************************************************************************************************************** -->
@@ -243,7 +243,7 @@
 
     <!-- Menu ************************************************************************************************************************************************************************************* -->
     <Style TargetType="{x:Type Menu}">
-        <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+        <Setter Property="Background" Value="{DynamicResource ecset.panelszin}"/>
     </Style>
 
     <!-- DatePicker ******************************************************************************************************************************************************************************* -->

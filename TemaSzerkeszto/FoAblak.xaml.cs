@@ -23,6 +23,8 @@ namespace TemaSzerkeszto
         public FoAblak()
         {
             InitializeComponent();
+
+            this.DataContext = new ViewModel.FoAblak_VM();
         }
     }
 }

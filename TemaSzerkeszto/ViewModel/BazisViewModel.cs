@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TemaSzerkeszto.ViewModel
+{
+    public class BazisViewModel : INotifyPropertyChanged
+    {
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void OnPropertyChanged([CallerMemberName] string _propnev = null) =>
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(_propnev));
+    }
+}

@@ -4,9 +4,137 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TemaSzerkeszto"
+        xmlns:relaxui="clr-namespace:RelaxUI;assembly=RelaxUI"
+        xmlns:wpfxt="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
-        Title="Téma szerkesztő" Height="450" Width="800">
-    <Grid>
+        Title="Téma szerkesztő" Width="1000" SizeToContent="Height" ResizeMode="NoResize"
+        Background="{DynamicResource ecset.ablakhatterszin}">
 
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Margin="10,10,5,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Megnevezés" HorizontalAlignment="Left"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Téma"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Státusz: alap"/>
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Státusz: ok"/>
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Státusz: információ"/>
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Státusz: figyelmezetés"/>
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Státusz: hiba"/>
+            <TextBlock Grid.Row="7" Grid.Column="0" Text="Ablak háttér"/>
+            <TextBlock Grid.Row="8" Grid.Column="0" Text="Panel"/>
+            <TextBlock Grid.Row="9" Grid.Column="0" Text="Szöveg"/>
+            <TextBlock Grid.Row="10" Grid.Column="0" Text="Letiltott szöveg"/>
+
+            <TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="80,0,0,5" Text="{Binding KivalasztottTema.Megnevezes, Mode=TwoWay}"/>
+            <wpfxt:ColorPicker Grid.Row="1" Grid.Column="1" Margin="0,0,0,5" SelectedColor="{Binding KivalasztottTema.TemaSzin, Mode=TwoWay}"/>
+            <wpfxt:ColorPicker Grid.Row="2" Grid.Column="1" Margin="0,0,0,5" SelectedColor="{Binding KivalasztottTema.StatuszAlapSzin, Mode=TwoWay}"/>
+            <wpfxt:ColorPicker Grid.Row="3" Grid.Column="1" Margin="0,0,0,5" SelectedColor="{Binding KivalasztottTema.StatuszOkSzin, Mode=TwoWay}"/>
+            <wpfxt:ColorPicker Grid.Row="4" Grid.Column="1" Margin="0,0,0,5" SelectedColor="{Binding KivalasztottTema.StatuszInformacioSzin, Mode=TwoWay}"/>
+            <wpfxt:ColorPicker Grid.Row="5" Grid.Column="1" Margin="0,0,0,5" SelectedColor="{Binding KivalasztottTema.StatuszFigyelmeztetesSzin, Mode=TwoWay}"/>
+            <wpfxt:ColorPicker Grid.Row="6" Grid.Column="1" Margin="0,0,0,5" SelectedColor="{Binding KivalasztottTema.StatuszHibaSzin, Mode=TwoWay}"/>
+            <wpfxt:ColorPicker Grid.Row="7" Grid.Column="1" Margin="0,0,0,5" SelectedColor="{Binding KivalasztottTema.AblakHatterSzin, Mode=TwoWay}"/>
+            <wpfxt:ColorPicker Grid.Row="8" Grid.Column="1" Margin="0,0,0,5" SelectedColor="{Binding KivalasztottTema.PanelSzin, Mode=TwoWay}"/>
+            <wpfxt:ColorPicker Grid.Row="9" Grid.Column="1" Margin="0,0,0,5" SelectedColor="{Binding KivalasztottTema.SzovegSzin, Mode=TwoWay}"/>
+            <wpfxt:ColorPicker Grid.Row="10" Grid.Column="1" SelectedColor="{Binding KivalasztottTema.SzovegLetiltottSzin, Mode=TwoWay}"/>
+        </Grid>
+
+        <Grid Grid.Column="1" Margin="5,10,5,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Vezérlő háttér"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Vezérlő keret"/>
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Vezérlő háttér, egér felette"/>
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Vezérlő keret, egér felette"/>
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Vezérlő háttér, akció"/>
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Vezérlő keret, akció"/>
+            <TextBlock Grid.Row="7" Grid.Column="0" Text="Vezérlő háttér, fókusz"/>
+            <TextBlock Grid.Row="8" Grid.Column="0" Text="Vezérlő keret, fókusz"/>
+            <TextBlock Grid.Row="9" Grid.Column="0" Text="Vezérlő háttér, letilott"/>
+            <TextBlock Grid.Row="10" Grid.Column="0" Text="Vezérlő keret, letiltott"/>
+
+            <wpfxt:ColorPicker Grid.Row="1" Grid.Column="1" Margin="0,0,0,5" SelectedColor="{Binding KivalasztottTema.VezerloHatterSzin, Mode=TwoWay}"/>
+            <wpfxt:ColorPicker Grid.Row="2" Grid.Column="1" Margin="0,0,0,5" SelectedColor="{Binding KivalasztottTema.VezerloKeretSzin, Mode=TwoWay}"/>
+            <wpfxt:ColorPicker Grid.Row="3" Grid.Column="1" Margin="0,0,0,5" SelectedColor="{Binding KivalasztottTema.VezerloHatterEgerFeletteSzin, Mode=TwoWay}"/>
+            <wpfxt:ColorPicker Grid.Row="4" Grid.Column="1" Margin="0,0,0,5" SelectedColor="{Binding KivalasztottTema.VezerloKeretEgerFeletteSzin, Mode=TwoWay}"/>
+            <wpfxt:ColorPicker Grid.Row="5" Grid.Column="1" Margin="0,0,0,5" SelectedColor="{Binding KivalasztottTema.VezerloHatterAkcioSzin, Mode=TwoWay}"/>
+            <wpfxt:ColorPicker Grid.Row="6" Grid.Column="1" Margin="0,0,0,5" SelectedColor="{Binding KivalasztottTema.VezerloKeretAkcioSzin, Mode=TwoWay}"/>
+            <wpfxt:ColorPicker Grid.Row="7" Grid.Column="1" Margin="0,0,0,5" SelectedColor="{Binding KivalasztottTema.VezerloHatterFokuszSzin, Mode=TwoWay}"/>
+            <wpfxt:ColorPicker Grid.Row="8" Grid.Column="1" Margin="0,0,0,5" SelectedColor="{Binding KivalasztottTema.VezerloKeretFokuszSzin, Mode=TwoWay}"/>
+            <wpfxt:ColorPicker Grid.Row="9" Grid.Column="1" Margin="0,0,0,5" SelectedColor="{Binding KivalasztottTema.VezerloHatterLetiltottSzin, Mode=TwoWay}"/>
+            <wpfxt:ColorPicker Grid.Row="10" Grid.Column="1" SelectedColor="{Binding KivalasztottTema.VezerloKeretLetiltottSzin, Mode=TwoWay}"/>
+        </Grid>
+
+        <StackPanel Grid.Column="1" Margin="5,10,5,10">
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Margin="20,10,20,10">
+            <TextBlock Text="Lorem ipsum dolor sit amet" Margin="0,0,0,10"/>
+            <TextBox Text="Lorem ipsum dolor sit amet" Margin="0,0,0,10"/>
+            <Button Content="Lorem ipsum dolor sit amet" Margin="0,0,0,10"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="3" Margin="5,10,10,10">
+            <TextBlock Text="Témák" Margin="0,0,0,5"/>
+            <ListBox ItemsSource="{Binding Source={x:Static relaxui:Temak.Egyke}, Path=TemaLista, Mode=OneWay}" Height="120"
+                     SelectedItem="{Binding Source={x:Static relaxui:Temak.Egyke}, Path=AktivTema, Mode=TwoWay}"/>
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,10">
+                <TextBlock Text="Aktív téma:" Margin="0,0,5,0" Background="{DynamicResource ecset.temaszin}"/>
+                <TextBlock Text="{Binding Source={x:Static relaxui:Temak.Egyke}, Path=AktivTema, Mode=OneWay}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Center">
+                <Ellipse Width="24" Height="24" Margin="0,0,5,0" Stroke="Gray" Fill="{DynamicResource ecset.statuszalap}"/>
+                <Ellipse Width="24" Height="24" Margin="0,0,5,0" Stroke="Gray" Fill="{DynamicResource ecset.statuszok}"/>
+                <Ellipse Width="24" Height="24" Margin="0,0,5,0" Stroke="Gray" Fill="{DynamicResource ecset.statuszinformacio}"/>
+                <Ellipse Width="24" Height="24" Margin="0,0,5,0" Stroke="Gray" Fill="{DynamicResource ecset.statuszfigyelmeztetes}"/>
+                <Ellipse Width="24" Height="24" Margin="0,0,5,0" Stroke="Gray" Fill="{DynamicResource ecset.statuszhiba}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+                <Button Command="{Binding KlonozParancs}" Content="Klónoz" Width="70" Margin="0,0,10,0"/>
+                <Button Command="{Binding TorolParancs}" Content="Töröl" Width="70" Margin="0,0,10,0"/>
+                <Button Command="{Binding MentesParancs}" Content="Mentés" Width="70" Margin="0,0,10,0"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>

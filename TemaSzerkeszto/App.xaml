@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:TemaSzerkeszto"
              StartupUri="FoAblak.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/RelaxUI;component/Stilusok.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

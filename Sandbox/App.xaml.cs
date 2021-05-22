@@ -17,7 +17,7 @@ namespace Sandbox
         {
             base.OnStartup(e);
 
-            RelaxUI.Temak.Egyke.Inicializal();
+            RelaxUI.Temak.Egyke.Betolt();
         }
     }
 }
